@@ -4,9 +4,7 @@ window.onload = function() {
     var canvasHeight = canvas.height
     var context = canvas.getContext("2d")
     var canvasData = context.getImageData(0, 0, canvasWidth, canvasHeight)
-    var dragging = false
 
-    // That's how you define the value of a pixel //
     function drawPixel (x, y, r, g, b, a) {
         if (x < 0 || x >= canvasWidth || y < 0 || y >= canvasHeight)
             return
@@ -62,8 +60,8 @@ window.onload = function() {
 
     function render() {
         clearCanvas()
-
-        var t = 0.0;
+        var t = 0.0
+        
         while (t <= 1.0) {
             var tInv = 1.0 - t
             var tInv2 = tInv * tInv
